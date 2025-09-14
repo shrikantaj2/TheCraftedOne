@@ -147,8 +147,9 @@ function isInViewport(element) {
   }
   
   function handleScroll() {
-    const elements = document.querySelectorAll('.home_container, .abt_me_1, .abt_me_2, .card, .review_person, .contact-form input, .contact-form textarea, .contact-form button');
-    const elements2 = document.querySelectorAll('.prob_container');
+    const elements = document.querySelectorAll('.home_container, .abt_me_1, .abt_me_2, .problems ul, .review_person, .contact-form input, .contact-form textarea, .contact-form button');
+    // const elements2 = document.querySelectorAll('.prob_container');
+    const elements3 = document.querySelectorAll('.prob_photo_0');
 
     elements.forEach(element => {
       if (isInViewport(element)) {
@@ -161,13 +162,23 @@ function isInViewport(element) {
       }
     });
 
-    elements2.forEach(element => {
+    // elements2.forEach(element => {
+    //     if (isInViewport(element)) {
+    //       element.classList.add('slide-in2');
+    //       element.classList.remove('slide-in2');
+    //     } else {
+    //       element.classList.remove('slide-in2');
+    //       element.classList.add('slide-in2');
+    //     }
+    //   });
+
+    elements3.forEach(element => {
         if (isInViewport(element)) {
-          element.classList.add('slide-in2');
-          element.classList.remove('slide-in2');
+          element.classList.add('slide-in3');
+          element.classList.remove('slide-in3');
         } else {
-          element.classList.remove('slide-in2');
-          element.classList.add('slide-in2');
+          element.classList.remove('slide-in3');
+          element.classList.add('slide-in3');
         }
       });
 
@@ -179,18 +190,16 @@ function isInViewport(element) {
 /*===================================================== image open  ===========================================================================*/
 
 const gallery = document.querySelectorAll('img');
-
-  gallery.forEach(img => {
+gallery.forEach(img => {
     img.addEventListener('click', () => {
-      window.open(img.src, '_blank');
+        window.open(img.src, '_blank');
     });
-  });
+});
 
-  const gallery2 = document.querySelectorAll('.profile_content2, .profile_content3, .profile_content4, .profile_content5, .profile_content6, .profile_content7');
-
-  gallery2.forEach(i => {
+const gallery2 = document.querySelectorAll('.profile_content2, .profile_content3, .profile_content4, .profile_content5, .profile_content6, .profile_content7');
+gallery2.forEach(i => {
     i.addEventListener('click', () => {
-      window.open(i.querySelector('img').src, '_blank');
+        window.open(i.querySelector('img').src, '_blank');
     });
-  });
+});
   
