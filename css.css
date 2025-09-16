@@ -221,6 +221,20 @@ body::before {
     box-shadow: 2px 2px 5px black;
 }
 
+.zoomIn {
+    animation: zoomIn 0.5s ease-in-out;
+}
+
+@keyframes zoomIn {
+    from {
+      transform: scale(1.5);
+    }
+    to {
+    transform: scale(1);
+    }
+    
+}
+
 .profile_photo1 img{
     background-color: black;
     height: 250px;
@@ -264,20 +278,7 @@ body::before {
     margin-top: 150px;
 }
 
-.abt_me_1{
-    align-content: center;
-    height: 420px;
-    width: 500px;
-    border-radius: 30px;
-    font-size: medium;
-    background-color: #75a2fd59;
-    border: 10px double #3f60a2;
-    padding: 20px;
-    text-align: left;
-    overflow-y: auto;
-}
-
-.abt_me_2{
+.abt_me_1, .abt_me_2{
     align-content: center;
     height: 420px;
     width: 500px;

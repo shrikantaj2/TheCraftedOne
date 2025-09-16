@@ -147,8 +147,8 @@ function isInViewport(element) {
   }
   
   function handleScroll() {
-    const elements = document.querySelectorAll('.home_container, .abt_me_1, .abt_me_2, .problems ul, .review_person, .contact-form input, .contact-form textarea, .contact-form button');
-    // const elements2 = document.querySelectorAll('.prob_container');
+    const elements = document.querySelectorAll('.welcome_text, .abt_me_1, .abt_me_2, .problems ul, .review_person, .contact-form input, .contact-form textarea, .contact-form button');
+    const elements2 = document.querySelectorAll('.profile_content1');
     const elements3 = document.querySelectorAll('.prob_photo_0');
 
     elements.forEach(element => {
@@ -162,15 +162,15 @@ function isInViewport(element) {
       }
     });
 
-    // elements2.forEach(element => {
-    //     if (isInViewport(element)) {
-    //       element.classList.add('slide-in2');
-    //       element.classList.remove('slide-in2');
-    //     } else {
-    //       element.classList.remove('slide-in2');
-    //       element.classList.add('slide-in2');
-    //     }
-    //   });
+    elements2.forEach(element => {
+        if (isInViewport(element)) {
+          element.classList.add('zoomIn');
+          element.classList.remove('zoomIn');
+        } else {
+          element.classList.remove('zoomIn');
+          element.classList.add('zoomIn');
+        }
+      });
 
     elements3.forEach(element => {
         if (isInViewport(element)) {
