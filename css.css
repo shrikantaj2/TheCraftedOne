@@ -253,9 +253,9 @@ body::before {
     margin-top: 20px;
     height: 35px;
     width:fit-content;
-    animation: showtext 3s ease;
+    /* animation: showtext 3s ease; */
 }
-
+/* 
 @keyframes showtext {
     0% {
         opacity: 0;
@@ -267,7 +267,7 @@ body::before {
         visibility: visible;
         transform: translateX(0);
     }
-}
+} */
 
 /*===================================================== About ===========================================================================*/
 
